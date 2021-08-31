@@ -35,11 +35,11 @@ class MahasiswaController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'nama' => ['required'],
-            'alamat' => ['required'],
-            'nohp' => ['required'],
-            'email' => ['required'],
-            'ukt' => ['required|numeric']
+            'nama' => 'required',
+            'alamat' => 'required',
+            'nohp' => 'required',
+            'email' => 'required',
+            'ukt' => 'required|numeric'
         ]);
 
         if($validator->fails()){
